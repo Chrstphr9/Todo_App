@@ -1,38 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+body {
+  background-image: url(./images.jpg);
+  background-size: cover; 
+  /*background-color: #25867e;*/
+  min-height: 100vh;
+}
+.title h1 {
+  color: #ff7200;
+  text-align: center;
+  margin: 30px 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  /*background: wheat;*/
+  padding:10px 20px;
+  margin-top: -14px;
+  border-radius: 10px;
+  /*box-shadow: 1px 2px 1px black;*/
+}
+
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form h3 {
+  text-align: center;
+}
+form input {
+    font-family: 'Times New Roman';
+    width: 300px;
+    height: 31px;
+    background: transparent;
+    border: 1px solid #ff7200;
+    margin-top: 13px;
+    color: white;
+    border-right: none;
+    font-weight: 900;
+    font-size: 20px;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.btn_container button {
+  width: 100px;
+  height: 53px;
+  background: #ff7200;
+  border: 2px solid #ff7200;
+  margin-top: 13px;
+  margin-left: px;
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* form input {
+  width: 100%;
+  padding: 10px 5px;
+  outline: none;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  border-radius: 10px;
+}
+/*.input_container {
+  margin-bottom: 20px;
+  margin-top: 10px;
+  width: 70%;
+}
+
+input::placeholder {
+  font-weight: 1000;
+}
+
+/*.btn_container {
+  text-align: right;
+  margin-left: 40px;
+}
+.btn_container button {
+  background:  #25867e;
+  color: wheat;
+  padding: 10px 20px;
+  margin-right: 20px;
+  margin-top: -10px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+} */
+
+.todo_container {
+  width: 50%;
+  margin: 0 auto;
+}
+.todo {
+  margin-top: 20px;
+  background: transparent;
+  border: 1px solid #ff7200;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.todo input {
+  cursor: pointer;
+  width: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 28px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.button-complete,
+.button-delete,
+.button-edit {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 50%;
+}
+#i {
+  font-size: 35px;
+}
+.button-complete {
+  color: white;
+  margin-right: 10px;
+}
+.button-edit {
+  color: white;
+  margin-right: 10px;
+}
+.button-delete {
+  color: white;
+}
+@media screen and (max-width: 667px) {
+  .task_container {
+    width: 90%;
+  }
+  .task {
+    margin-right: 0px;
+  }
+}
+input:focus,
+button:focus {
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background-image: none;
+}
+
+/* Custom Select */
+.select {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px; 
+}
+select {
+  color: #ff7200;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  width: 14rem;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+/* Arrow */
+.select::after {
+  content: "\25BC";
+  position: block;
+  top: 0;
+  right: 0;
+  padding: 15px;
+  margin-left: -30px;
+  background: #ff7200;
+  cursor: pointer;
+  pointer-events: none;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  /* margin-right: 41rem; */
+}
+.filter-todo {
+  padding: 1rem;
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
 }
